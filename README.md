@@ -6,3 +6,8 @@
 cargo new rust-axum-api
 ```
 
+## start app
+
+```
+cargo run
+```
