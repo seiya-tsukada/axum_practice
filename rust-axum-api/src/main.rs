@@ -3,15 +3,15 @@ use axum::{
     Router,
     extract::{Path, Query},
 };
-use serde::Deserialize;
+
+// モジュールを宣言
+mod models;
+
+// モジュールから構造体をインポート
+use models::params::Params;
 
 #[tokio::main]
 async fn main() {
-
-    #[derive(Deserialize)]
-    struct Params {
-        id: Option<u8>,
-    }
 
     // ハンドラーを定義
     async fn root_handler() -> String {
